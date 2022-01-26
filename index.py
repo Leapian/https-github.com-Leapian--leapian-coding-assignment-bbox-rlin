@@ -28,7 +28,9 @@ for item in word_dict:
     else:
         height_dict[item.height].append(item)
 
-print(height_dict)
+temp = [(len(value), key) for key, value in height_dict.items()]
+print(max(temp)[1])
+
 
     
 
