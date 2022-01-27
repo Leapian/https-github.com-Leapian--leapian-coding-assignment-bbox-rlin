@@ -4,6 +4,8 @@ import numpy as np
 import statistics
 # your code here
 # let x_coordinate be x, y_coordinate be y, text be text, word height be height
+
+# Requirement 1
 class Word:
     def __init__(self, x, y, text, height, width):
         self.x = x
@@ -15,11 +17,13 @@ word_dict = []
 
 del data[0]
 
+
+# Requirement 2
 for i in range(len(data)):
     word = Word(float(data[i][3]), float(data[i][4]), data[i][7], round(float(data[i][6])), float(data[i][5]))
     word_dict.append(word)
 
-
+# Requirement 3
 height_dict = {}
 
 for item in word_dict:
@@ -29,9 +33,11 @@ for item in word_dict:
 
     else:
         height_dict[item.height].append(item)
-
+# Requirement 4
 temp = [(len(value), key) for key, value in height_dict.items()]
 print(max(temp)[1])
+
+# Requirement 5
 main_word_dict = height_dict[max(temp)[1]]
 ycoordinate_dict = {}
 for item in word_dict:
