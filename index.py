@@ -77,9 +77,9 @@ for key in ycoordinate_dict:
     for i in range(1, len(tuple_list)):
         dist_lst.append(tuple_list[i][0]- tuple_list[i-1][0] - tuple_list[i-1][1])
     
-print("The distance between words is" + ' ' + str(np.mean(dist_lst)))
-print("The distance between words is" + ' ' + str(statistics.mode(dist_lst)))
-print("The distance between words is" + ' ' + str(np.median(dist_lst)))
+print("The mean of distance between words is" + ' ' + str(np.mean(dist_lst)))
+print("The mode of distance between words is" + ' ' + str(statistics.mode(dist_lst)))
+print("The median of distance between words is" + ' ' + str(np.median(dist_lst)))
 
     
 
